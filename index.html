@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orozco Engineering | OSP &amp; Fiber Engineering Contractor</title>
+<meta name="description" content="Orozco Engineering: OSP and fiber engineering contract services led by principal engineer Danny Orozco. Fiber capacity planning, route tracing, reinforcement planning, FTTX design, QA/QC and cost estimating. Remote and on-site.">
+<meta name="theme-color" content="#06142b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2306142b'/%3E%3Cpath d='M5 22c6 0 6-12 12-12s7 6 10 6' stroke='%2322d3ee' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Inter";src:url(assets/fonts/inter.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Fraunces";src:url(assets/fonts/fraunces.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{
+  --bg0:#040d1d;--bg1:#06142b;--bg2:#0a1f3f;--navy:#0b2545;--ink:#14243a;--muted:#5a6a80;
+  --paper:#f6f8fb;--line:#e1e7ef;--teal:#14b8a6;--cyan:#22d3ee;--sky:#7dd3fc;
+  --grad:linear-gradient(120deg,#2dd4bf 0%,#22d3ee 50%,#60a5fa 100%);
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px;overflow-x:hidden}
+img,svg,canvas{display:block}
+a{color:#0e7490}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--navy);padding:.6rem 1rem;z-index:200;border-radius:8px}
+.skip:focus{left:1rem;top:1rem}
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.4rem}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- Header ---------- */
+.site-header{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .3s,border-color .3s,box-shadow .3s;border-bottom:1px solid transparent}
+.site-header.scrolled,.site-header.solid{background:rgba(6,20,43,.72);-webkit-backdrop-filter:blur(14px) saturate(1.5);backdrop-filter:blur(14px) saturate(1.5);border-bottom-color:rgba(125,211,252,.14);box-shadow:0 10px 30px rgba(2,8,20,.25)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:70px}
+.brand{display:flex;align-items:center;gap:.7rem;color:#fff;text-decoration:none;white-space:nowrap}
+.brand-mark{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#0f2b52,#0a1f3f);border:1px solid rgba(125,211,252,.25);box-shadow:0 0 18px rgba(34,211,238,.25) inset}
+.brand-name{font-family:var(--serif);font-weight:600;font-size:1.22rem;letter-spacing:.005em}
+.brand-name em{font-style:normal;color:var(--sky)}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:1.7rem}
+.nav a{color:#c9d8ea;text-decoration:none;font-size:.93rem;font-weight:500;transition:color .2s}
+.nav a:hover{color:#fff}
+.nav a.btn-grad,.nav a.btn-grad:hover{color:#04263a}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.9rem 1.45rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:.98rem;line-height:1.2;transition:transform .2s,box-shadow .2s,background-color .2s,border-color .2s}
+.btn svg{flex:none}
+.btn-grad{background:var(--grad);color:#04263a;box-shadow:0 10px 30px -8px rgba(34,211,238,.55),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-grad:hover{transform:translateY(-2px);box-shadow:0 16px 38px -10px rgba(34,211,238,.75),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-glass{color:#eaf3ff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.22);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.btn-glass:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.4);transform:translateY(-2px)}
+.btn-sm{padding:.58rem 1.05rem;font-size:.88rem;white-space:nowrap}
+.show-xs{display:none}
+@media (max-width:420px){.hide-xs{display:none}.show-xs{display:inline}}
+@media (max-width:920px){.nav li:not(.keep){display:none}}
+@media (max-width:420px){.brand-name{font-size:1.06rem}.brand-mark{width:32px;height:32px}.btn-sm{padding:.5rem .85rem;font-size:.82rem}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:min(100vh,900px);display:flex;align-items:center;color:#fff;background:radial-gradient(900px 520px at 78% 18%,rgba(34,211,238,.16),transparent 60%),radial-gradient(700px 500px at 10% 90%,rgba(45,212,191,.12),transparent 60%),linear-gradient(180deg,var(--bg0) 0%,#081a36 55%,var(--bg1) 100%);overflow:hidden;isolation:isolate}
+#fiber{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero .scrim{position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(4,13,29,.82) 0%,rgba(4,13,29,.55) 38%,rgba(4,13,29,0) 70%),linear-gradient(180deg,transparent 68%,var(--bg1) 97%)}
+@media (max-width:700px){.hero .scrim{background:linear-gradient(180deg,rgba(4,13,29,.35),rgba(4,13,29,.7) 50%,var(--bg1) 100%)}}
+.hero .grid-bg{position:absolute;inset:0;z-index:-2;opacity:.18;background-image:linear-gradient(rgba(125,211,252,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(125,211,252,.18) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 70% 30%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse at 70% 30%,#000 10%,transparent 70%)}
+.hero .wrap{padding-top:8.5rem;padding-bottom:6rem;width:100%}
+.pill{display:inline-flex;align-items:center;gap:.6rem;padding:.42rem .95rem .42rem .55rem;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(125,211,252,.22);font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#cfe6f7;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:#2dd4bf;box-shadow:0 0 0 4px rgba(45,212,191,.18),0 0 12px #2dd4bf}
+@media (max-width:420px){.pill{font-size:.72rem;letter-spacing:.04em}}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.35rem,6vw,4.6rem);line-height:1.04;letter-spacing:-.02em;margin:1.4rem 0 1.3rem;max-width:15ch}
+.hero h1 .grad-text{font-style:italic}
+.hero .lead{font-size:clamp(1.04rem,1.8vw,1.2rem);color:#c4d4e8;max-width:60ch;margin:0 0 2rem}
+.hero .btns{display:flex;flex-wrap:wrap;gap:.9rem}
+.principal{display:flex;align-items:center;gap:.85rem;margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.1);max-width:560px}
+.monogram{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:1.1rem;color:#fff;background:linear-gradient(#0a1f3f,#0a1f3f) padding-box,var(--grad) border-box;border:2px solid transparent;flex:none}
+.principal strong{display:block;font-weight:600;color:#fff}
+.principal span{font-size:.92rem;color:#9fb4cc}
+
+/* ---------- Stats ---------- */
+.stats{position:relative;z-index:2;margin-top:-3.2rem;background:linear-gradient(180deg,transparent 0 3.2rem,var(--bg1) 3.2rem)}
+.stats ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 60px -30px rgba(6,20,43,.35),0 2px 6px rgba(6,20,43,.05);overflow:hidden}
+.stats li{padding:1.6rem 1.5rem;position:relative}
+.stats li+li::before{content:"";position:absolute;left:0;top:22%;bottom:22%;width:1px;background:var(--line)}
+.stat-n{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1;letter-spacing:-.02em;color:var(--navy)}
+.stat-n .grad-text{font-style:italic}
+.stat-l{margin-top:.5rem;font-size:.9rem;color:var(--muted);line-height:1.45}
+@media (max-width:820px){.stats ul{grid-template-columns:repeat(2,1fr)}.stats li:nth-child(3)::before{display:none}.stats li:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* ---------- Sections ---------- */
+section{padding:6.5rem 0}
+.sec-head{max-width:740px;margin-bottom:3rem}
+.eyebrow{display:inline-flex;align-items:center;gap:.65rem;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#0e7490}
+.eyebrow::before{content:"";width:30px;height:2px;border-radius:2px;background:var(--grad)}
+.sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.02em;color:var(--navy);margin:.8rem 0 .9rem}
+.sec-head h2 em{font-style:italic}
+.sec-head p{margin:0;color:var(--muted);font-size:1.06rem}
+
+/* Services (dark, glass) */
+.services{position:relative;color:#e6eef8;background:radial-gradient(800px 500px at 90% 0%,rgba(34,211,238,.12),transparent 60%),radial-gradient(700px 600px at 0% 100%,rgba(45,212,191,.10),transparent 60%),linear-gradient(180deg,var(--bg1),var(--bg0));overflow:hidden;isolation:isolate;padding-top:6rem}
+.services::after{content:"";position:absolute;inset:0 0 auto 0;height:260px;background:linear-gradient(180deg,var(--bg1) 0%,rgba(6,20,43,0) 100%);z-index:-1;pointer-events:none}
+.services .sec-head h2{color:#fff}.services .sec-head p{color:#a9bdd4}.services .eyebrow{color:var(--sky)}
+.services .orbs{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.services .orbs span{position:absolute;border-radius:50%;filter:blur(60px);opacity:.35}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+@media (max-width:980px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.svc-grid{grid-template-columns:1fr}}
+.glass{position:relative;padding:1.7rem 1.6rem 1.6rem;border-radius:var(--r);background:linear-gradient(160deg,rgba(255,255,255,.085),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.11);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 20px 40px -24px rgba(0,0,0,.6);transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,background .35s}
+.glass::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(140deg,rgba(45,212,191,.7),transparent 35%,transparent 65%,rgba(96,165,250,.6));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .35s;pointer-events:none}
+.glass:hover{transform:translateY(-4px);background:linear-gradient(160deg,rgba(255,255,255,.11),rgba(255,255,255,.035))}
+.glass:hover::after{opacity:1}
+.svc-ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:1.1rem;background:linear-gradient(145deg,rgba(45,212,191,.18),rgba(96,165,250,.12));border:1px solid rgba(125,211,252,.25);color:#7ee8f5;box-shadow:0 0 24px -6px rgba(34,211,238,.5)}
+.glass h3{font-family:var(--sans);font-size:1.08rem;font-weight:650;color:#fff;margin:0 0 .5rem;line-height:1.35}
+.glass p{margin:0;color:#a9bdd4;font-size:.95rem;line-height:1.6}
+.svc-num{position:absolute;top:1.45rem;right:1.5rem;font-family:var(--serif);font-style:italic;font-size:.95rem;color:rgba(125,211,252,.45)}
+
+/* Tools */
+.tools-grid{display:grid;gap:1.3rem}
+.tools-side{grid-template-columns:1.4fr 1fr;align-items:start}
+@media (max-width:900px){.tools-side{grid-template-columns:1fr}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.8rem;box-shadow:0 24px 50px -36px rgba(6,20,43,.35)}
+.panel h3{margin:0 0 1.1rem;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;display:flex;align-items:center;gap:.6rem}
+.panel h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--grad)}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;list-style:none;margin:0;padding:0}
+.chips li{padding:.5rem .9rem;border-radius:999px;font-size:.9rem;font-weight:550;color:var(--navy);background:#f1f6fb;border:1px solid #dbe6f1}
+.chips.sw li{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(120deg,#99f6e4,#a5f3fc,#bfdbfe) border-box;border:1.5px solid transparent;font-weight:600}
+.tools-side{display:grid;gap:1.3rem}
+
+/* Experience */
+.exp{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.companies{display:flex;flex-wrap:wrap;gap:.7rem;list-style:none;margin:-1rem 0 3.2rem;padding:0}
+.companies li{font-family:var(--serif);font-weight:500;font-size:1.08rem;color:var(--navy);padding:.6rem 1.15rem;border-radius:12px;background:var(--paper);border:1px solid var(--line)}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:180px;top:10px;bottom:10px;width:2px;background:linear-gradient(180deg,#2dd4bf,#22d3ee 30%,#93c5fd 70%,rgba(147,197,253,.15))}
+.tl>li{display:grid;grid-template-columns:180px 1fr;gap:0 2.6rem;position:relative;padding-bottom:2.4rem}
+.tl>li:last-child{padding-bottom:0}
+.tl-when{text-align:right;padding-top:.15rem;padding-right:1.5rem}
+.tl-when b{display:block;font-size:.92rem;font-weight:700;color:var(--navy)}
+.tl-when span{font-size:.84rem;color:var(--muted)}
+.tl-node{position:absolute;left:173px;top:.45rem;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid #22d3ee;box-shadow:0 0 0 5px rgba(34,211,238,.14)}
+.tl>li:first-child .tl-node{background:#22d3ee;box-shadow:0 0 0 5px rgba(34,211,238,.2),0 0 18px rgba(34,211,238,.8)}
+.tl-card{padding:0 0 0 .2rem}
+.tl-card .co{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .7rem;margin:0}
+.tl-card .co strong{font-family:var(--serif);font-weight:600;font-size:1.45rem;color:var(--navy);letter-spacing:-.01em}
+.tl-card .co span{font-size:.9rem;color:var(--muted)}
+.tl-card .title{margin:.15rem 0 .8rem;font-weight:600;color:#0e7490;font-size:.98rem}
+.tl-card ul{margin:0;padding:0;list-style:none}
+.tl-card li{position:relative;padding-left:1.25rem;margin:.45rem 0;color:#3d4d63;font-size:.97rem}
+.tl-card li::before{content:"";position:absolute;left:0;top:.68em;width:7px;height:7px;border-radius:2px;transform:rotate(45deg);background:var(--grad)}
+@media (max-width:760px){
+  .tl::before{left:7px}
+  .tl>li{grid-template-columns:1fr;padding-left:2.1rem}
+  .tl-node{left:0}
+  .tl-when{text-align:left;order:-1;margin-bottom:.3rem;padding-right:0}
+  .tl-when b,.tl-when span{display:inline}
+  .tl-when span::before{content:" · "}
+}
+
+/* How I work */
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+@media (max-width:900px){.how-grid{grid-template-columns:1fr}}
+.how-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:2rem 1.8rem 1.8rem;overflow:hidden;box-shadow:0 24px 50px -36px rgba(6,20,43,.35)}
+.how-card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--grad)}
+.how-card .n{font-family:var(--serif);font-style:italic;font-size:2.6rem;line-height:1;margin-bottom:.9rem}
+.how-card h3{margin:0 0 .5rem;font-size:1.15rem;color:var(--navy)}
+.how-card p{margin:0;color:var(--muted);font-size:.97rem}
+.note{margin-top:1.6rem;color:var(--muted);font-size:.95rem}
+
+/* Education */
+.edu{padding-top:0}
+.edu-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:1.3rem}
+@media (max-width:820px){.edu-grid{grid-template-columns:1fr}}
+.edu-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.8rem;display:flex;gap:1.1rem;align-items:flex-start}
+.edu-ico{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#ccfbf1,#cffafe);color:#0e7490}
+.edu-card h3{margin:0 0 .3rem;font-size:1.08rem;color:var(--navy)}
+.edu-card p{margin:0;color:var(--muted);font-size:.96rem}
+
+/* CTA */
+.cta{padding:0 0 6.5rem}
+.cta-box{position:relative;border-radius:28px;overflow:hidden;isolation:isolate;color:#fff;padding:clamp(2.2rem,5vw,4rem);background:radial-gradient(600px 380px at 100% 0%,rgba(34,211,238,.28),transparent 60%),radial-gradient(500px 400px at 0% 100%,rgba(45,212,191,.22),transparent 60%),linear-gradient(140deg,var(--bg1),var(--bg2));box-shadow:0 40px 80px -40px rgba(6,20,43,.6)}
+.cta-box svg.lines{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.5}
+.cta-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center}
+@media (max-width:860px){.cta-grid{grid-template-columns:1fr}}
+.cta h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4.2vw,3.1rem);line-height:1.08;letter-spacing:-.02em;margin:.8rem 0 1rem}
+.cta h2 em{font-style:italic}
+.cta .eyebrow{color:var(--sky)}
+.cta p{color:#c4d4e8;margin:0 0 1.6rem;max-width:52ch}
+.cta .btns{display:flex;flex-wrap:wrap;gap:.9rem}
+.cta-list{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:1.6rem 1.6rem 1.3rem;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.cta-list h3{margin:0 0 .8rem;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sky)}
+.cta-list ul{margin:0;padding:0;list-style:none}
+.cta-list li{display:flex;gap:.7rem;margin:.55rem 0;color:#dbe7f3;font-size:.95rem}
+.cta-list li svg{flex:none;margin-top:.22rem}
+.mail{display:inline-flex;align-items:center;gap:.55rem;margin-top:1.4rem;color:#fff;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(125,211,252,.4);padding-bottom:2px;word-break:break-all}
+.mail:hover{border-color:#fff}
+
+/* Footer */
+footer{background:var(--bg0);color:#8ea3bb;padding:3.2rem 0 2.2rem;font-size:.92rem}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;align-items:flex-start;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot p{margin:.8rem 0 0;max-width:40ch}
+.foot nav ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,auto);gap:.5rem 2.2rem}
+.foot a{color:#c9d8ea;text-decoration:none}
+.foot a:hover{color:#fff}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem;padding-top:1.4rem}
+.legal a{color:#c9d8ea}
+
+/* Reveal */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Orozco Engineering, home">
+      <span class="brand-mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 32 32"><defs><linearGradient id="bm" x1="0" x2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#60a5fa"/></linearGradient></defs><path d="M4 23c6 0 6-14 12-14s7 7 12 7" stroke="url(#bm)" stroke-width="3.2" fill="none" stroke-linecap="round"/><circle cx="28" cy="16" r="2.6" fill="#fff"/></svg></span>
+      <span class="brand-name">Orozco <em>Engineering</em></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#how">How I work</a></li>
+        <li class="keep"><a class="btn btn-grad btn-sm" href="#quote"><span class="hide-xs">Request a quote</span><span class="show-xs">Get a quote</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="grid-bg" aria-hidden="true"></div>
+  <canvas id="fiber" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="pill reveal"><span class="dot" aria-hidden="true"></span>Available for remote &amp; on-site projects</span>
+    <h1 id="hero-title" class="reveal" style="--d:.08s">OSP &amp; Fiber Engineering <span class="grad-text">Contractor</span></h1>
+    <p class="lead reveal" style="--d:.16s">Fiber capacity planning, route tracing, reinforcement planning and construction-ready OSP packages for aerial, underground and buried networks, backed by 10+ years of outside plant engineering, planning, design and project delivery across major telecommunications providers.</p>
+    <div class="btns reveal" style="--d:.24s">
+      <a class="btn btn-grad" href="mailto:odanny626@gmail.com?subject=Orozco%20Engineering%20-%20OSP%20%2F%20Fiber%20Project%20Quote%20Request">Request a quote
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-glass" href="Danny_Orozco_OSP_Engineer_Resume.pdf" download>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download resume (PDF)</a>
+    </div>
+    <div class="principal reveal" style="--d:.32s">
+      <div class="monogram" aria-hidden="true">DO</div>
+      <div><strong>Danny Orozco</strong><span>Principal Engineer · OSP Planning Engineer</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats" aria-label="At a glance">
+  <div class="wrap">
+    <ul class="reveal">
+      <li><div class="stat-n"><span class="grad-text">10+</span> yrs</div><div class="stat-l">OSP network engineering, planning, design &amp; delivery</div></li>
+      <li><div class="stat-n">6</div><div class="stat-l">Telecom &amp; engineering employers, including AT&amp;T and Cox</div></li>
+      <li><div class="stat-n">2010</div><div class="stat-l">Designing fiber routes &amp; splicing prints since</div></li>
+      <li><div class="stat-n">3</div><div class="stat-l">Plant types: aerial, underground &amp; buried</div></li>
+    </ul>
+  </div>
+</div>
+
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="orbs" aria-hidden="true"><span style="width:340px;height:340px;left:-80px;top:30%;background:#14b8a6"></span><span style="width:380px;height:380px;right:-120px;top:10%;background:#2563eb"></span></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Services</span>
+      <h2>From capacity assessment to <em class="grad-text">construction-ready</em> packages</h2>
+      <p>Planning and engineering support for carriers, contractors and engineering firms, across the full OSP lifecycle.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="glass reveal"><span class="svc-num" aria-hidden="true">01</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><rect x="5" y="12" width="3" height="5" rx="1"/><rect x="10.5" y="8" width="3" height="9" rx="1"/><rect x="16" y="4" width="3" height="13" rx="1"/></svg></div>
+        <h3>Fiber Capacity Planning &amp; Analysis</h3>
+        <p>F1 feeder and distribution fiber capacity assessments that determine network capacity needs, identify fiber shortages and constraints, and produce reinforcement recommendations before the engineering/design phase.</p></article>
+      <article class="glass reveal" style="--d:.06s"><span class="svc-num" aria-hidden="true">02</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 5h7a3.5 3.5 0 0 1 0 7h-4a3.5 3.5 0 0 0 0 7h7" stroke-dasharray="2.5 2.5"/></svg></div>
+        <h3>Route Tracing &amp; Network Records Review</h3>
+        <p>Review of network records and systems to trace existing routes and infrastructure, evaluate fiber availability, and find capacity gaps within Local/ILEC-style networks.</p></article>
+      <article class="glass reveal" style="--d:.12s"><span class="svc-num" aria-hidden="true">03</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 6.5V17M12 10l-7 7M12 10l7 7"/></svg></div>
+        <h3>OSP / FTTX Design (GPON)</h3>
+        <p>GPON backbone design, fiber pathway routing and assignment, distribution layouts, terminal placements, cabinet configurations, equipment sizing, fiber routes, splicing prints and work orders.</p></article>
+      <article class="glass reveal"><span class="svc-num" aria-hidden="true">04</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l6-4v16M10 21V3l10 4v14M3 21h18"/><path d="M13.5 9h3M13.5 12.5h3M13.5 16h3"/></svg></div>
+        <h3>Fiber-to-the-Business &amp; Customer-Driven Fiber</h3>
+        <p>Capacity analysis, route verification and construction-ready planning packages supporting Fiber-to-the-Business deployments, network expansion and customer-driven fiber growth.</p></article>
+      <article class="glass reveal" style="--d:.06s"><span class="svc-num" aria-hidden="true">05</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v8M19 3v8M5 5c4 3 10 3 14 0"/><path d="M2 14h20"/><rect x="6" y="17" width="12" height="4" rx="2"/></svg></div>
+        <h3>Aerial, Underground &amp; Buried Plant</h3>
+        <p>Conduit, vault and pathway analysis and planning; support for cable relocation, upgrades and reinforcement of underground and aerial plant.</p></article>
+      <article class="glass reveal" style="--d:.12s"><span class="svc-num" aria-hidden="true">06</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 14l2 2 4-4"/></svg></div>
+        <h3>QA/QC &amp; Constructability Reviews</h3>
+        <p>Detailed capacity and constructability reviews of OSP/ISP designs, QA/QC of construction drawings and documents, and as-built documentation.</p></article>
+      <article class="glass reveal"><span class="svc-num" aria-hidden="true">07</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 11h.01M12 11h.01M16 11h.01M8 14.5h.01M12 14.5h.01M16 14.5h.01M8 18h.01M12 18h4"/></svg></div>
+        <h3>Cost Estimating &amp; Planning Packages</h3>
+        <p>Project budgets, cost estimates and quotes based on labor, materials and regional construction costs; cost tracking and billable work packages; planning packages ready for Engineering handoff.</p></article>
+      <article class="glass reveal" style="--d:.06s"><span class="svc-num" aria-hidden="true">08</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M5 6h14M7 10h10"/><path d="M5 6l-2 4M19 6l2 4"/><path d="M8 22h8"/></svg></div>
+        <h3>Permitting &amp; Utility Coordination</h3>
+        <p>Permit and pathway approval coordination with cities and utilities, including AT&amp;T duct and pole attachments, plus coordination with construction crews, municipalities and customers to resolve field issues.</p></article>
+      <article class="glass reveal" style="--d:.12s"><span class="svc-num" aria-hidden="true">09</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3>Field Assessments &amp; Project Management</h3>
+        <p>Nationwide site assessments, route verification and field data collection; schedule, ECD and deliverable management; Scope of Work review; CAD drawings and engineering documentation.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="tools" aria-labelledby="tools-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Tools &amp; Software</span>
+      <h2 id="tools-title">The <em class="grad-text">toolkit</em></h2>
+      <p>Systems and skills used day to day, exactly as listed on Danny's resume.</p>
+    </div>
+    <div class="tools-grid">
+      <div class="panel reveal">
+        <h3>Systems &amp; Software</h3>
+        <ul class="chips sw">
+          <li>AutoCAD</li><li>IQGeo</li><li>Bluebeam</li><li>ArcGIS / GIS Mapping</li><li>MicroStation</li><li>AT&amp;T Design Systems (Aramis, Waldo)</li><li>Network Records Review &amp; Fiber Availability Analysis</li><li>Microsoft Excel</li><li>Word</li><li>PowerPoint</li><li>Project</li><li>Visio</li><li>Google Earth familiarity</li>
+        </ul>
+      </div>
+      <div class="tools-side">
+        <div class="panel reveal" style="--d:.08s">
+          <h3>OSP &amp; Planning</h3>
+          <ul class="chips">
+            <li>F1 Feeder-Fiber Capacity Assessment</li><li>Route Tracing &amp; Shortage Identification</li><li>Reinforcement Planning (Pre-Design)</li><li>Fiber-to-the-Business / Customer Fiber Support</li><li>Conduit &amp; Vault Planning</li><li>Cost Estimating</li><li>Planning Packages &amp; Engineering Handoffs</li><li>Fiber Optic Design (GPON / FTTX)</li>
+          </ul>
+        </div>
+        <div class="panel reveal" style="--d:.14s">
+          <h3>Additional</h3>
+          <ul class="chips">
+            <li>QA/QC of Construction Drawings</li><li>As-Built Documentation</li><li>Permitting Coordination</li><li>Stakeholder Communication</li><li>Independent Remote Execution</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="exp" id="experience" aria-labelledby="exp-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Experience &amp; Clients</span>
+      <h2 id="exp-title">Built on <em class="grad-text">major-provider</em> experience</h2>
+      <p>Danny's OSP engineering, planning and project delivery work, 2010 to today.</p>
+    </div>
+    <ul class="companies reveal" aria-label="Companies Danny has worked with">
+      <li>Pearce Services</li><li>Cox Communications</li><li>CTC Technology</li><li>WYYERD Fiber</li><li>AT&amp;T</li><li>CHC Consulting</li>
+    </ul>
+    <ol class="tl">
+      <li class="reveal"><div class="tl-when"><b>Jun 2025 – Present</b><span>Remote</span></div><span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-card"><p class="co"><strong>Pearce Services</strong></p><p class="title">OSP Engineer</p><ul>
+          <li>Assess F1 feeder and distribution fiber capacity and routing for underground and aerial networks; identify shortages and constraints, and develop reinforcement recommendations prior to detailed engineering and field execution.</li>
+          <li>Perform detailed capacity and constructability reviews of OSP/ISP designs using AutoCAD, IQGeo and Bluebeam; trace existing routes, evaluate fiber availability, and prepare planning packages that support Engineering handoff.</li>
+          <li>Prepare project budgets, cost estimates and planning documentation by evaluating labor, materials and regional construction costs, supporting resource allocation and construction-ready deliverables for customer-driven fiber growth.</li>
+          <li>Deliver clear, accurate planning packages that enable efficient Engineering review and successful fiber deployment, including support for Fiber-to-the-Business and network expansion projects.</li>
+        </ul></div></li>
+      <li class="reveal"><div class="tl-when"><b>Oct 2021 – Jun 2025</b><span>Irvine, CA</span></div><span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-card"><p class="co"><strong>Cox Communications</strong></p><p class="title">Planner II</p><ul>
+          <li>Developed Business-As-Usual (BAU) engineering and planning designs for OSP and ISP fiber optic networks, ensuring capacity alignment with customer requirements; determined network capacity needs and reinforcement approaches ahead of detailed design.</li>
+          <li>Analyzed network records and route designs to support cable relocation, upgrades and reinforcement of underground and aerial plant; traced existing infrastructure and identified capacity gaps for Fiber-to-the-Business and network improvement initiatives.</li>
+          <li>Prepared project documentation, cost tracking and billable work packages that supported accurate job costing and timely delivery of network reinforcement and customer-driven fiber projects.</li>
+          <li>Applied established planning and engineering processes while managing multiple priorities independently in a high-volume environment, producing planning packages for Engineering handoff.</li>
+        </ul></div></li>
+      <li class="reveal"><div class="tl-when"><b>Feb 2024 – Jan 2025</b><span>Remote</span></div><span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-card"><p class="co"><strong>CTC Technology</strong></p><p class="title">Senior Engineer (OSP Consulting)</p><ul>
+          <li>Provided OSP planning and technical guidance for fiber optic infrastructure projects; conducted capacity analysis, route verification and reinforcement planning to support construction-ready engineering packages for aerial and underground facilities.</li>
+          <li>Conducted nationwide site assessments, route verification and field data collection to support capacity analysis, identify shortages, and develop accurate project documentation and reinforcement recommendations.</li>
+          <li>Coordinated with construction crews, utilities, municipalities and customers to resolve field issues and ensure projects progressed according to engineering specifications and schedule.</li>
+        </ul></div></li>
+      <li class="reveal"><div class="tl-when"><b>Feb 2022 – Dec 2022</b><span>National City, CA</span></div><span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-card"><p class="co"><strong>WYYERD Fiber</strong></p><p class="title">OSP Lead Engineer</p><ul>
+          <li>Engineered scalable OSP/ISP fiber network architectures, including GPON backbone design, fiber pathway routing/assignment, and capacity planning for network expansion and Fiber-to-the-Business deployments.</li>
+          <li>Designed distribution layouts, terminal placements and cabinet configurations; determined equipment sizing and fiber assignments to optimize capacity and readiness for activation.</li>
+          <li>Prepared detailed construction documentation and coordinated installation activities with field teams to ensure constructability and quality.</li>
+        </ul></div></li>
+      <li class="reveal"><div class="tl-when"><b>May 2018 – Dec 2022</b><span>Rosemead, CA</span></div><span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-card"><p class="co"><strong>AT&amp;T</strong></p><p class="title">Project Manager</p><ul>
+          <li>Verified costs, labor and resource allocations for OSP/ISP fiber projects; managed schedules, ECDs and deliverables to keep work on time and within budget.</li>
+          <li>Reviewed Scopes of Work, monitored workload, and applied AT&amp;T engineering systems (including Aramis and Waldo) to support planning, design, documentation and delivery of fiber infrastructure; reviewed network records to evaluate fiber availability and trace existing infrastructure.</li>
+          <li>Collaborated with engineering, construction and stakeholders to resolve issues and achieve operational objectives on complex outside plant deployments supporting network growth and customer demand.</li>
+        </ul></div></li>
+      <li class="reveal"><div class="tl-when"><b>Jan 2010 – May 2018</b><span>Anaheim, CA</span></div><span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-card"><p class="co"><strong>CHC Consulting</strong></p><p class="title">Project Manager / Design Engineer</p><ul>
+          <li>Designed fiber routes, created splicing prints and work orders, and prepared cost quotes for OSP projects; coordinated permits and pathway approvals with cities and utilities (including AT&amp;T duct and pole attachments).</li>
+          <li>Produced CAD drawings and engineering documentation supporting utility and construction teams on land development and telecommunications infrastructure projects.</li>
+        </ul></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How I work</span>
+      <h2 id="how-title">Flexible <em class="grad-text">engagement</em> options</h2>
+      <p>Orozco Engineering works with carriers, engineering firms, contractors and staffing agencies in whatever structure fits the project.</p>
+    </div>
+    <div class="how-grid">
+      <article class="how-card reveal"><div class="n grad-text">01</div><h3>Hourly or project contracts</h3><p>Hourly support for ongoing workloads, or fixed-scope project contracts for defined planning, design or review packages.</p></article>
+      <article class="how-card reveal" style="--d:.08s"><div class="n grad-text">02</div><h3>1099 or W2 through agencies</h3><p>Hourly or project contracts as an independent 1099 contractor, or W2 through staffing agencies.</p></article>
+      <article class="how-card reveal" style="--d:.16s"><div class="n grad-text">03</div><h3>Remote first, on-site when needed</h3><p>Experienced in independent remote execution, with field site assessments, route verification and crew coordination when the project calls for it.</p></article>
+    </div>
+    <p class="note reveal">Rates are quoted per project. Send a short scope to get started.</p>
+  </div>
+</section>
+
+<section class="edu" id="education" aria-labelledby="edu-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Education</span>
+      <h2 id="edu-title">Education</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal"><div class="edu-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg></div>
+        <div><h3>Associate of Science, Business Administration</h3><p>DeVry University · 2010 – 2012</p></div></div>
+      <div class="edu-card reveal" style="--d:.08s"><div class="edu-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 22l5-3 5 3-1.5-9.5"/></svg></div>
+        <div><h3>10+ years of equivalent professional experience</h3><p>OSP network engineering, planning, design and project delivery across major telecommunications providers, including capacity assessment, route analysis and reinforcement planning for feeder and distribution fiber networks.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="quote" aria-labelledby="quote-title">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <svg class="lines" viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="cl" x1="0" x2="1"><stop offset="0" stop-color="#2dd4bf" stop-opacity="0"/><stop offset=".6" stop-color="#22d3ee"/><stop offset="1" stop-color="#60a5fa" stop-opacity=".2"/></linearGradient></defs><g fill="none" stroke="url(#cl)" stroke-linecap="round"><path d="M-20 420 C 300 400, 600 160, 1240 120" stroke-width="1.6"/><path d="M-20 460 C 340 440, 640 220, 1240 190" stroke-width="1"/><path d="M-20 380 C 260 360, 560 110, 1240 60" stroke-width=".8"/></g></svg>
+      <div class="cta-grid">
+        <div>
+          <span class="eyebrow">Request a quote</span>
+          <h2 id="quote-title">Have an OSP or <em class="grad-text">fiber project?</em></h2>
+          <p>Email a quick overview and Orozco Engineering will follow up to discuss scope, schedule and engagement type.</p>
+          <div class="btns">
+            <a class="btn btn-grad" href="mailto:odanny626@gmail.com?subject=Orozco%20Engineering%20-%20OSP%20%2F%20Fiber%20Project%20Quote%20Request&amp;body=Hi%20Danny%2C%0A%0AProject%20location%3A%20%0AType%20of%20work%3A%20%0APlant%20type%20(aerial%2Funderground%2Fburied)%3A%20%0ATimeline%3A%20%0APreferred%20engagement%20(hourly%2C%20project%2C%201099%2C%20W2)%3A%20%0A%0AThanks%2C%0A">Request a quote by email
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-glass" href="Danny_Orozco_OSP_Engineer_Resume.pdf" download>Download resume (PDF)</a>
+          </div>
+          <a class="mail" href="mailto:odanny626@gmail.com"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>odanny626@gmail.com</a>
+        </div>
+        <div class="cta-list">
+          <h3>Helpful to include</h3>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Project location, or whether it's remote only</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Type of work: capacity planning, design, QA/QC, estimating, permitting, field</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Plant type: aerial, underground or buried</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Tools or systems required (e.g. AutoCAD, IQGeo, Bluebeam, ArcGIS)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Timeline and preferred engagement (hourly, project, 1099, W2)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top" aria-label="Orozco Engineering, back to top">
+          <span class="brand-mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 32 32"><path d="M4 23c6 0 6-14 12-14s7 7 12 7" stroke="url(#bm)" stroke-width="3.2" fill="none" stroke-linecap="round"/><circle cx="28" cy="16" r="2.6" fill="#fff"/></svg></span>
+          <span class="brand-name">Orozco <em>Engineering</em></span>
+        </a>
+        <p>OSP &amp; fiber engineering contract services, led by Danny Orozco, Principal Engineer. Remote and on-site.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#services">Services</a></li><li><a href="#experience">Experience</a></li>
+          <li><a href="#tools">Tools</a></li><li><a href="#how">How I work</a></li>
+          <li><a href="#quote">Request a quote</a></li><li><a href="Danny_Orozco_OSP_Engineer_Resume.pdf" download>Resume (PDF)</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="legal">
+      <span>© 2026 Orozco Engineering · Danny Orozco, Principal Engineer</span>
+      <a href="mailto:odanny626@gmail.com">odanny626@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var header=document.getElementById('header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>24)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  /* Fiber-optic light trails */
+  var c=document.getElementById('fiber');if(!c||!c.getContext)return;
+  var ctx=c.getContext('2d'),W=0,H=0,dpr=1,paths=[],pulses=[],running=true,visible=true,raf=0;
+  function rnd(a,b){return a+Math.random()*(b-a)}
+  function build(){
+    dpr=Math.min(window.devicePixelRatio||1,2);
+    W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+    paths=[];var n=W<700?9:14;
+    for(var i=0;i<n;i++){
+      var t=i/(n-1),y0=H*(0.62+t*0.5),y3=H*(-0.05+t*0.55);
+      paths.push({p:[[-40,y0],[W*rnd(.25,.4),y0-H*rnd(.0,.12)],[W*rnd(.55,.7),y3+H*rnd(.05,.2)],[W+40,y3]],w:rnd(.6,1.6),a:rnd(.12,.32)});
+    }
+    pulses=[];for(var k=0;k<n*2;k++)pulses.push(newPulse(true));
+  }
+  function newPulse(init){return{i:Math.floor(Math.random()*paths.length),t:init?Math.random():-.1,s:rnd(.0009,.0026),len:rnd(.05,.13),hue:Math.random()<.5?'45,212,191':(Math.random()<.5?'34,211,238':'125,211,252')}}
+  function pt(P,t){var u=1-t;return[u*u*u*P[0][0]+3*u*u*t*P[1][0]+3*u*t*t*P[2][0]+t*t*t*P[3][0],u*u*u*P[0][1]+3*u*u*t*P[1][1]+3*u*t*t*P[2][1]+t*t*t*P[3][1]]}
+  function draw(){
+    ctx.clearRect(0,0,W,H);ctx.lineCap='round';
+    paths.forEach(function(pa){var P=pa.p;ctx.beginPath();ctx.moveTo(P[0][0],P[0][1]);ctx.bezierCurveTo(P[1][0],P[1][1],P[2][0],P[2][1],P[3][0],P[3][1]);ctx.strokeStyle='rgba(125,211,252,'+pa.a+')';ctx.lineWidth=pa.w;ctx.stroke()});
+    ctx.globalCompositeOperation='lighter';
+    pulses.forEach(function(q){
+      var P=paths[q.i].p,steps=18,t0=q.t-q.len;
+      for(var s=0;s<steps;s++){
+        var ta=t0+q.len*s/steps,tb=t0+q.len*(s+1)/steps;if(tb<0||ta>1)continue;
+        var a=pt(P,Math.max(0,ta)),b=pt(P,Math.min(1,tb)),f=(s+1)/steps;
+        ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);
+        ctx.strokeStyle='rgba('+q.hue+','+(f*.18)+')';ctx.lineWidth=5+f*6;ctx.stroke();ctx.strokeStyle='rgba('+q.hue+','+(f*.9)+')';ctx.lineWidth=1+f*1.8;ctx.stroke();
+      }
+      if(q.t>=0&&q.t<=1){var h=pt(P,q.t);ctx.beginPath();ctx.arc(h[0],h[1],2.4,0,6.283);ctx.fillStyle='rgba(255,255,255,.95)';ctx.shadowColor='rgba('+q.hue+',1)';ctx.shadowBlur=14;ctx.fill();ctx.shadowBlur=0}
+    });
+    ctx.shadowBlur=0;ctx.globalCompositeOperation='source-over';
+  }
+  function tick(){pulses.forEach(function(q,i){q.t+=q.s;if(q.t-q.len>1)pulses[i]=newPulse(false)});draw();raf=(running&&visible&&!document.hidden)?requestAnimationFrame(tick):0}
+  build();draw();
+  if(!reduce){
+    if('IntersectionObserver' in window){new IntersectionObserver(function(e){visible=e[0].isIntersecting;if(visible&&!raf)tick()}).observe(c)}
+    document.addEventListener('visibilitychange',function(){if(!document.hidden&&!raf&&visible)tick()});
+    tick();
+  }
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){build();draw()},150)});
+})();
+</script>
+</body>
+</html>
