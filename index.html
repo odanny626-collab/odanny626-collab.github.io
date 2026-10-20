@@ -8,7 +8,10 @@
 <title>Orozco Engineering | OSP &amp; Fiber Engineering Contractor</title>
 <meta name="description" content="Orozco Engineering: OSP and fiber engineering contract services owned and led by Danny Orozco. Fiber capacity planning, route tracing, reinforcement planning, FTTX design, QA/QC and cost estimating. Remote and on-site.">
 <meta name="theme-color" content="#0B0B0B">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0B0B'/%3E%3Cpath d='M5 22c6 0 6-12 12-12s7 6 10 6' stroke='%23D4AF37' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -43,6 +46,8 @@ a:hover{color:var(--gold-l)}
 .brand{display:flex;align-items:center;gap:.7rem;color:#fff;text-decoration:none;white-space:nowrap}
 .brand:hover{color:#fff}
 .brand-mark{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#1c1c1c,#0B0B0B);border:1px solid rgba(212,175,55,.45);box-shadow:0 0 18px rgba(212,175,55,.18) inset}
+.brand-logo{width:44px;height:44px;flex:none;filter:drop-shadow(0 0 10px rgba(212,175,55,.25))}
+.hero-logo{width:min(400px,78vw);height:auto;margin:0 0 1.4rem -.4rem}
 .brand-name{font-family:var(--serif);font-weight:600;font-size:1.22rem;letter-spacing:.005em}
 .brand-name em{font-style:normal;color:var(--gold)}
 .nav ul{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:1.7rem}
@@ -59,7 +64,7 @@ a:hover{color:var(--gold-l)}
 .show-xs{display:none}
 @media (max-width:420px){.hide-xs{display:none}.show-xs{display:inline}}
 @media (max-width:920px){.nav li:not(.keep){display:none}}
-@media (max-width:420px){.brand-name{font-size:1.06rem}.brand-mark{width:32px;height:32px}.btn-sm{padding:.5rem .85rem;font-size:.82rem}}
+@media (max-width:420px){.brand-name{font-size:1.06rem}.brand-mark,.brand-logo{width:38px;height:38px}.btn-sm{padding:.5rem .85rem;font-size:.82rem}}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;min-height:min(100vh,900px);display:flex;align-items:center;color:#fff;background:radial-gradient(900px 520px at 78% 18%,rgba(212,175,55,.10),transparent 60%),url(assets/img/hero-fiber-desktop.webp) 100% 100%/88vw auto no-repeat,#050505;overflow:hidden;isolation:isolate}
@@ -245,7 +250,7 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
 <header class="site-header" id="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Orozco Engineering, home">
-      <span class="brand-mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 32 32"><defs><linearGradient id="bm" x1="0" x2="1"><stop offset="0" stop-color="#B8922E"/><stop offset="1" stop-color="#F0D77E"/></linearGradient></defs><path d="M4 23c6 0 6-14 12-14s7 7 12 7" stroke="url(#bm)" stroke-width="3.2" fill="none" stroke-linecap="round"/><circle cx="28" cy="16" r="2.6" fill="#fff"/></svg></span>
+      <img class="brand-logo" src="assets/img/logo/orozco-icon-128.webp" width="44" height="44" alt="Orozco Engineering logo">
       <span class="brand-name">Orozco <em>Engineering</em></span>
     </a>
     <nav class="nav" aria-label="Main">
@@ -267,6 +272,7 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
   <canvas id="fiber" aria-hidden="true"></canvas>
   <div class="scrim" aria-hidden="true"></div>
   <div class="wrap">
+    <img class="hero-logo reveal" src="assets/img/logo/orozco-logo-wide-800.webp" width="800" height="266" alt="Orozco Engineering logo" fetchpriority="high">
     <span class="pill reveal"><span class="dot" aria-hidden="true"></span>Available for remote &amp; on-site projects</span>
     <h1 id="hero-title" class="reveal" style="--d:.08s">OSP &amp; Fiber Engineering <span class="grad-text">Contractor</span></h1>
     <p class="lead reveal" style="--d:.16s">Fiber capacity planning, route tracing, reinforcement planning and construction-ready OSP packages for aerial, underground and buried networks, backed by 17+ years of outside plant engineering, planning, design and project delivery across major telecommunications providers.</p>
@@ -516,7 +522,7 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
     <div class="foot">
       <div>
         <a class="brand" href="#top" aria-label="Orozco Engineering, back to top">
-          <span class="brand-mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 32 32"><path d="M4 23c6 0 6-14 12-14s7 7 12 7" stroke="url(#bm)" stroke-width="3.2" fill="none" stroke-linecap="round"/><circle cx="28" cy="16" r="2.6" fill="#fff"/></svg></span>
+          <img class="brand-logo" src="assets/img/logo/orozco-icon-128.webp" width="44" height="44" alt="" loading="lazy">
           <span class="brand-name">Orozco <em>Engineering</em></span>
         </a>
         <p>OSP &amp; fiber engineering contract services, owned and led by Danny Orozco. Remote and on-site.</p>
