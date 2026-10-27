@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preload" as="image" href="assets/img/hero-fiber-desktop.webp" media="(min-width:701px)">
 <link rel="preload" as="image" href="assets/img/hero-fiber-mobile.webp" media="(max-width:700px)">
-<title>Orozco Engineering LLC | OSP Fiber Planning &amp; Design | Inland Empire, CA</title>
-<meta name="description" content="Orozco Engineering LLC: OSP fiber planning and design for Southern California and the Inland Empire. F1 feeder capacity and reinforcement planning, FTTH/GPON distribution design, make-ready and permitting packages, QA/QC and contract overflow support. Fontana-based, remote or on-site.">
+<title>Orozco Engineering LLC | OSP Fiber Design, Make-Ready &amp; Permits | Serving all of California</title>
+<meta name="description" content="Orozco Engineering LLC helps connect California communities to fiber broadband. OSP fiber route design (aerial and underground), make-ready and pole attachment applications, joint use coordination, substructure design, layout and traffic control plan (TCP) permits, as-builts and QA/QC. Based in Fontana, CA, serving all of California.">
 <meta name="theme-color" content="#0B0B0B">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -199,7 +199,7 @@ section{padding:6.5rem 0}
 .edu-card p{margin:0;color:var(--muted);font-size:.96rem}
 
 /* CTA */
-.cta{padding:0 0 6.5rem;background:var(--bg0)}
+.cta{padding:0 0 6.5rem;background:var(--bg1)}
 .cta-box{position:relative;border-radius:28px;overflow:hidden;isolation:isolate;color:#fff;padding:clamp(2.2rem,5vw,4rem);background:radial-gradient(600px 380px at 100% 0%,rgba(212,175,55,.2),transparent 60%),radial-gradient(500px 400px at 0% 100%,rgba(212,175,55,.1),transparent 60%),linear-gradient(140deg,#161616,#0E0E0E);border:1px solid rgba(212,175,55,.35);box-shadow:0 40px 80px -40px rgba(0,0,0,.9)}
 .cta-box svg.lines{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.45}
 .cta-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center}
@@ -266,6 +266,58 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
 .mail-row{display:flex;flex-wrap:wrap;gap:.9rem 1.6rem;margin-top:1.4rem}
 .mail-row .mail{margin:0!important}
 @media (max-width:480px){.mail-row .mail{word-break:normal;overflow-wrap:anywhere;font-size:.9rem}}
+
+/* ---------- v2 informative additions ---------- */
+.tagline{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2vw,1.4rem);color:var(--gold-l);margin:-.4rem 0 1rem;text-shadow:0 1px 14px rgba(0,0,0,.85)}
+.mission{background:var(--bg1);padding:6rem 0 5rem}
+.mission-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:2.4rem;align-items:start}
+@media (max-width:900px){.mission-grid{grid-template-columns:1fr}}
+.mission-copy p{margin:0 0 1.1rem;color:#E5E5E5;font-size:1.06rem;max-width:62ch}
+.mission-copy p.big{font-family:var(--serif);font-size:clamp(1.25rem,2.2vw,1.55rem);line-height:1.4;color:#fff}
+.connects{list-style:none;margin:1.4rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.55rem}
+.connects li{padding:.5rem .95rem;border-radius:999px;font-size:.9rem;font-weight:600;color:#F5F5F5;background:linear-gradient(#1A1A1A,#1A1A1A) padding-box,var(--grad) border-box;border:1.5px solid transparent}
+.quote{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:2rem 1.8rem 1.6rem;box-shadow:0 24px 50px -36px rgba(0,0,0,.9);overflow:hidden}
+.quote::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad)}
+.quote blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:1.18rem;line-height:1.5;color:#fff}
+.quote cite{display:block;margin-top:1rem;font-style:normal;color:var(--gold);font-weight:600;font-size:.95rem}
+.values{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.6rem}
+@media (max-width:1000px){.values{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.values{grid-template-columns:1fr}}
+.value{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.5rem 1.4rem}
+.value h3{margin:.2rem 0 .4rem;font-size:1.08rem;color:#fff}
+.value p{margin:0;color:var(--muted);font-size:.95rem}
+.value .svc-ico{width:44px;height:44px;margin-bottom:.8rem}
+.who{background:var(--bg0)}
+.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+@media (max-width:1000px){.who-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.who-grid{grid-template-columns:1fr}}
+.process{background:var(--bg1);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:1.1rem;counter-reset:st}
+@media (max-width:1050px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+.steps li{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.7rem 1.4rem 1.5rem;overflow:hidden}
+.steps li::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--grad)}
+.steps .n{font-family:var(--serif);font-style:italic;font-size:2.1rem;line-height:1;margin-bottom:.7rem}
+.steps h3{margin:0 0 .45rem;font-size:1.1rem;color:#fff}
+.steps p{margin:0;color:var(--muted);font-size:.94rem}
+.deliv{background:var(--bg0)}
+.deliv-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:1.3rem;align-items:start}
+@media (max-width:900px){.deliv-grid{grid-template-columns:1fr}}
+.ticks{list-style:none;margin:0;padding:0;columns:2;column-gap:1.6rem}
+@media (max-width:560px){.ticks{columns:1}}
+.ticks li{display:flex;gap:.6rem;margin:0 0 .65rem;color:#E5E5E5;font-size:.95rem;break-inside:avoid}
+.ticks li svg{flex:none;margin-top:.25rem}
+.panel p{margin:0 0 .9rem;color:#D9D9D9;font-size:.96rem}
+.panel p:last-child{margin-bottom:0}
+.faq{background:var(--bg1);border-top:1px solid var(--line2)}
+.faq-list{max-width:900px;display:grid;gap:.8rem}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 1.3rem}
+.faq summary{cursor:pointer;list-style:none;padding:1.1rem 2rem 1.1rem 0;font-weight:600;color:#fff;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:.85rem;font-size:1.4rem;color:var(--gold)}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{margin:0 0 1.1rem;color:#D9D9D9;font-size:.96rem}
+.faq{padding-bottom:6.5rem}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -280,9 +332,10 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
     </a>
     <nav class="nav" aria-label="Main">
       <ul>
+        <li><a href="#mission">Mission</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#why">Why us</a></li>
+        <li><a href="#process">How we work</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#founder">About</a></li>
         <li class="keep"><a class="btn btn-grad btn-sm" href="#contact"><span class="hide-xs">Contact us</span><span class="show-xs">Contact</span></a></li>
       </ul>
@@ -297,9 +350,10 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
   <div class="scrim" aria-hidden="true"></div>
   <div class="wrap">
     <img class="hero-logo reveal" src="assets/img/logo/orozco-logo-wide-800.webp" width="800" height="266" alt="Orozco Engineering logo" fetchpriority="high">
-    <span class="pill reveal"><span class="dot" aria-hidden="true"></span>Fontana, CA · Remote or on-site</span>
-    <h1 id="hero-title" class="reveal" style="--d:.08s">OSP fiber planning &amp; design for <span class="grad-text">Southern California</span></h1>
-    <p class="lead reveal" style="--d:.16s">Orozco Engineering gives OSP contractors, engineering firms and fiber providers construction-ready planning, design and permitting packages, plus overflow capacity when the backlog grows. Based in the Inland Empire and backed by 30+ years of combined OSP fiber experience, including work with AT&amp;T, Cox, Frontier and Spectrum, plus firms like Pearce Services, CTC Technology, WYYERD Fiber and CHC Consulting.</p>
+    <span class="pill reveal"><span class="dot" aria-hidden="true"></span>Fontana, CA · Serving all of California</span>
+    <h1 id="hero-title" class="reveal" style="--d:.08s">OSP fiber design &amp; permits for <span class="grad-text">California</span></h1>
+    <p class="tagline reveal" style="--d:.12s">Designing the fiber paths that connect our communities.</p>
+    <p class="lead reveal" style="--d:.16s">Orozco Engineering LLC designs the outside plant that brings fiber internet to homes, schools and businesses: aerial and underground fiber routes, make-ready and pole attachment packages, substructure drawings, and the layout and traffic control plans cities, counties and Caltrans need to issue permits. Led by Danny Orozco, with 17+ years of OSP fiber experience including work with AT&amp;T and Cox.</p>
     <div class="btns reveal" style="--d:.24s">
       <a class="btn btn-grad" href="tel:+19096958326"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (909) 695-8326</a>
       <a class="btn btn-glass" href="mailto:danny@orozcoengineering.com?subject=Orozco%20Engineering%20-%20OSP%20Fiber%20Project&amp;body=Hi%20Danny%2C%0A%0AProject%20location%3A%20%0AType%20of%20work%3A%20%0APlant%20type%20(aerial%2Funderground%2Fburied)%3A%20%0ATimeline%3A%20%0A%0AThanks%2C%0A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email us</a>
@@ -311,21 +365,51 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
 <div class="stats" aria-label="At a glance">
   <div class="wrap">
     <ul class="reveal">
-      <li><div class="stat-n"><span class="grad-text">30+</span> yrs</div><div class="stat-l">Combined OSP fiber planning, design &amp; delivery experience</div></li>
+      <li><div class="stat-n"><span class="grad-text">17+</span> yrs</div><div class="stat-l">OSP fiber planning, design &amp; delivery experience</div></li>
       <li><div class="stat-n">Major carriers</div><div class="stat-l">AT&amp;T, Cox, Frontier, Spectrum and more</div></li>
-      <li><div class="stat-n">IE</div><div class="stat-l">Fontana-based, on-site across Southern California</div></li>
+      <li><div class="stat-n">All of CA</div><div class="stat-l">Fontana-based, serving projects statewide</div></li>
       <li><div class="stat-n">3</div><div class="stat-l">Plant types: aerial, underground &amp; buried</div></li>
     </ul>
   </div>
 </div>
 
+
+<section class="mission" id="mission" aria-labelledby="mission-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Our mission</span>
+      <h2 id="mission-title">Helping build the networks <em class="grad-text">communities run on</em></h2>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-copy reveal">
+        <p class="big">Every fiber connection starts as a design. Before a home gets fast internet, a classroom streams a lesson or a clinic sends a scan, someone has to plan the conduit, the poles and the permits that get the fiber there.</p>
+        <p>That is our work. Orozco Engineering LLC helps connect homes, schools, hospitals, small businesses and emergency services to fast, reliable fiber broadband. We design the underground and pole infrastructure communities depend on, and we deliver safe, accurate, on-time design and permit packages so builders and cities can move faster.</p>
+        <p>Every route that gets built is one more neighborhood connected, and one more step toward closing the digital divide.</p>
+        <ul class="connects" aria-label="Who fiber connects">
+          <li>Homes</li><li>Schools</li><li>Hospitals &amp; clinics</li><li>Small businesses</li><li>Emergency services</li>
+        </ul>
+      </div>
+      <figure class="quote reveal" style="--d:.08s">
+        <blockquote>"I've spent more than 17 years in outside plant fiber. I started Orozco Engineering so every route I design gets built right the first time, and so more families and businesses get the connection they've been waiting for."</blockquote>
+        <cite>Danny Orozco, Owner</cite>
+      </figure>
+    </div>
+    <div class="values">
+      <article class="value reveal"><div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Safety</h3><p>Designs that respect existing utilities, clearances and traffic control, so crews and the public stay safe.</p></article>
+      <article class="value reveal" style="--d:.06s"><div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></div><h3>Accuracy</h3><p>Every package is checked against records, field conditions and agency standards before it goes out.</p></article>
+      <article class="value reveal" style="--d:.12s"><div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v5l3 2"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Responsiveness</h3><p>You work directly with Danny. Questions get answered and plan check corrections get turned around quickly.</p></article>
+      <article class="value reveal" style="--d:.18s"><div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div><h3>Community</h3><p>This is infrastructure our neighbors use every day. We treat every route with that in mind.</p></article>
+    </div>
+  </div>
+</section>
+
 <section class="services" id="services" aria-labelledby="services-title">
   <div class="orbs" aria-hidden="true"><span style="width:340px;height:340px;left:-80px;top:30%;background:#D4AF37"></span><span style="width:380px;height:380px;right:-120px;top:10%;background:#8A6D1F"></span></div>
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">What we offer</span>
+      <span class="eyebrow">What we do</span>
       <h2 id="services-title">OSP fiber services, from capacity check to <em class="grad-text">handoff-ready</em> package</h2>
-      <p>Planning, design and permitting support for OSP contractors, engineering firms and fiber providers, on aerial, underground and buried plant.</p>
+      <p>In plain terms: we plan where the fiber goes, design how it gets there (on poles or underground), prepare the drawings and applications needed to get permission to build, and document what was built. Aerial, underground and buried plant.</p>
     </div>
     <div class="svc-grid">
       <article class="glass reveal" style="--d:0.00s"><span class="svc-num" aria-hidden="true">01</span>
@@ -359,7 +443,7 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
       <article class="glass reveal" style="--d:0.06s"><span class="svc-num" aria-hidden="true">08</span>
         <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></div>
         <h3>Contract &amp; Overflow Support for Contractors</h3>
-        <p>Added planning and design capacity when your backlog grows: remote anywhere, or on-site for field walkouts and route verification across Southern California.</p></article>
+        <p>Added planning and design capacity when your backlog grows: remote statewide, or on-site for field walkouts and route verification across Southern California.</p></article>
       <article class="glass reveal" style="--d:0.12s"><span class="svc-num" aria-hidden="true">09</span>
         <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h20"/><rect x="4" y="11" width="6" height="6" rx="1"/><rect x="14" y="11" width="6" height="6" rx="1"/><path d="M10 14h4"/><path d="M7 17v4M17 17v4"/></svg></div>
         <h3>Substructure Design</h3>
@@ -368,6 +452,100 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
         <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 17H3z"/><path d="M8.5 14h7"/><path d="M10 10.5h4"/></svg></div>
         <h3>Layout &amp; Traffic Control Plan (TCP) Permits</h3>
         <p>Construction layout drawings and traffic control plans (TCPs) for city, county and Caltrans encroachment permits. Layouts show the route, structure locations, bore pits, trench limits, restoration and dimensions from curb and property lines. TCPs cover lane and shoulder closures, sidewalk and bike lane detours, signage and cone tapers based on CA MUTCD standard layouts, and work hours. Includes permit applications, submittals, plan check corrections and resubmittals through approval, so crews can build on schedule.</p></article>
+      <article class="glass reveal" style="--d:0.06s"><span class="svc-num" aria-hidden="true">11</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V5M19 21V5"/><path d="M3 7h4M17 7h4"/><path d="M5 9c4 3 10 3 14 0"/><path d="M2 21h20" stroke-dasharray="2.5 2.5"/></svg></div>
+        <h3>Fiber Route Design, Aerial &amp; Underground</h3>
+        <p>New fiber routes, extensions and relocations on poles or underground: route selection, cable sizing, splice and terminal locations, slack and storage, splicing prints and work orders, all drawn to the owner's design standards.</p></article>
+      <article class="glass reveal" style="--d:0.12s"><span class="svc-num" aria-hidden="true">12</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2 20c0-3 2.2-5 5-5s5 2 5 5M12 20c0-3 2.2-5 5-5s5 2 5 5"/></svg></div>
+        <h3>Joint Use Coordination</h3>
+        <p>Joint use and pole attachment coordination for make-ready, between pole owners, other attachers, utilities and the city so every party knows what moves, who moves it and when.</p></article>
+      <article class="glass reveal" style="--d:0.00s"><span class="svc-num" aria-hidden="true">13</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M6 16l9-9 3 3-9 9H6z"/><path d="M13 9l3 3"/></svg></div>
+        <h3>As-Builts &amp; CAD Drafting</h3>
+        <p>As-built drawings that match what crews actually installed, redline updates, and CAD drafting support for design and permit sets, so records stay accurate for the next project.</p></article>
+      <article class="glass reveal" style="--d:0.06s"><span class="svc-num" aria-hidden="true">14</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M8 22h8"/><path d="M6 6h12M8 10h8"/><path d="M18 6l3 5h-6z"/></svg></div>
+        <h3>Pole Loading &amp; Attachment Analysis</h3>
+        <p>Design and analysis support for new aerial attachments: reviewing existing pole conditions, attachment heights and clearances, and the added load of new fiber, then documenting the make-ready needed for the pole owner's attachment application.</p></article>
+      <article class="glass reveal" style="--d:0.12s"><span class="svc-num" aria-hidden="true">15</span>
+        <div class="svc-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M8 14l2 2 4-4"/></svg></div>
+        <h3>Project &amp; Permit Management</h3>
+        <p>Hands-on management of OSP fiber projects and their permits: reviewing scopes of work, verifying costs, labor and resources, managing schedules and completion dates, tracking permits through approval, and coordinating engineering, construction, utilities and cities to keep work on time and within budget.</p></article>
+    </div>
+  </div>
+</section>
+
+
+<section class="who" id="who" aria-labelledby="who-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Who we work for</span>
+      <h2 id="who-title">Built for the teams that <em class="grad-text">build fiber</em></h2>
+      <p>We fit in as an extension of your team, on one package or ongoing work.</p>
+    </div>
+    <div class="who-grid">
+      <article class="glass reveal"><div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M8 22h8"/><path d="M5 7a10 10 0 0 1 14 0M8 10a6 6 0 0 1 8 0"/></svg></div><h3>Telecom carriers</h3><p>Planning, design and permit packages that follow your standards and records systems, with capacity when your in-house team is full.</p></article>
+      <article class="glass reveal" style="--d:.06s"><div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M12 12l-6 5M12 12l6 5"/></svg></div><h3>Fiber builders &amp; ISPs</h3><p>FTTH and business fiber designs, make-ready and permits, so you can get crews in the field and customers connected sooner.</p></article>
+      <article class="glass reveal" style="--d:.12s"><div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V10l6-4v14M10 20V8l10 4v8"/></svg></div><h3>Prime contractors &amp; engineering firms</h3><p>Overflow design, drafting, permitting and QA/QC support when your backlog grows, without adding headcount.</p></article>
+      <article class="glass reveal" style="--d:.18s"><div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10"/><path d="M2 10l10-6 10 6z"/></svg></div><h3>Municipalities &amp; public agencies</h3><p>Help planning broadband routes and preparing clear, complete plans that move through review with fewer corrections.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How we work</span>
+      <h2 id="process-title">A simple process, <em class="grad-text">start to finish</em></h2>
+      <p>Five steps, the same on every job, so you always know where your project stands.</p>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><div class="n grad-text">01</div><h3>Scope</h3><p>We review your location, records, standards and deadline, then confirm the scope, deliverables, schedule and rate in writing.</p></li>
+      <li class="reveal" style="--d:.06s"><div class="n grad-text">02</div><h3>Design</h3><p>Route, aerial and underground design, make-ready and substructure drawings, built from records, field walkouts and your design rules.</p></li>
+      <li class="reveal" style="--d:.12s"><div class="n grad-text">03</div><h3>Permit</h3><p>Layouts, TCPs and applications for city, county and Caltrans encroachment permits and pole attachments, followed through corrections to approval.</p></li>
+      <li class="reveal" style="--d:.18s"><div class="n grad-text">04</div><h3>QC</h3><p>Every package is checked for capacity, constructability, clearances and agency requirements before it leaves our hands.</p></li>
+      <li class="reveal" style="--d:.24s"><div class="n grad-text">05</div><h3>Deliver</h3><p>Clean PDF and CAD files ready to build or hand to Engineering, plus as-builts after construction when needed.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="deliv" id="deliverables" aria-labelledby="deliv-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Deliverables, turnaround &amp; service area</span>
+      <h2 id="deliv-title">What you get, and <em class="grad-text">where we work</em></h2>
+    </div>
+    <div class="deliv-grid">
+      <div class="panel reveal">
+        <h3>Typical deliverables</h3>
+        <ul class="ticks">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Aerial and underground fiber route design drawings</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Plan and profile drawings for substructure</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Make-ready and pole attachment application packages</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Construction layout drawings</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Traffic control plans (TCPs)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Permit applications, submittals and resubmittals</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Splicing prints and work orders</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Quantities, material lists and cost estimates</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Capacity assessments and reinforcement recommendations</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>As-built drawings</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>PDF sets plus AutoCAD (DWG) files</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>QA/QC review notes and redlines</li>
+        </ul>
+      </div>
+      <div style="display:grid;gap:1.3rem">
+        <div class="panel reveal" style="--d:.06s">
+          <h3>Turnaround</h3>
+          <p>Turnaround depends on the size of the job and the type of package. We give you a schedule up front, confirm it in writing before work starts, and keep you updated along the way.</p>
+          <p>Permit approval times are set by each city, county, Caltrans or pole owner. We track every submittal and turn corrections around quickly to keep it moving.</p>
+        </div>
+        <div class="panel reveal" style="--d:.12s">
+          <h3>Service area</h3>
+          <p><strong style="color:#fff">All of California.</strong> Design, drafting and permitting work is done remotely for projects anywhere in the state.</p>
+          <p>Based in Fontana, with on-site field walkouts and meetings across the Inland Empire and Southern California, and elsewhere in California by arrangement.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -423,8 +601,8 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
       <p>Built for OSP contractors and engineering firms that need dependable planning and design help without adding headcount.</p>
     </div>
     <div class="how-grid why-grid">
-      <article class="how-card reveal" style="--d:0.00s"><div class="n grad-text">01</div><h3>30+ years of combined OSP fiber experience</h3><p>Every package is planned and reviewed with 30+ years of combined outside plant fiber planning and design behind it, including work with AT&amp;T, Cox, Frontier and Spectrum.</p></article>
-      <article class="how-card reveal" style="--d:0.06s"><div class="n grad-text">02</div><h3>Local to the Inland Empire</h3><p>Based in Fontana, Orozco Engineering can be on-site for walkouts and meetings across Southern California, and works remotely on projects anywhere.</p></article>
+      <article class="how-card reveal" style="--d:0.00s"><div class="n grad-text">01</div><h3>17+ years of OSP fiber experience</h3><p>Every package is planned and reviewed with 17+ years of outside plant fiber planning and design behind it, including work with AT&amp;T and Cox.</p></article>
+      <article class="how-card reveal" style="--d:0.06s"><div class="n grad-text">02</div><h3>Statewide reach, local roots</h3><p>Based in Fontana, Orozco Engineering serves all of California, with on-site walkouts and meetings across Southern California.</p></article>
       <article class="how-card reveal" style="--d:0.12s"><div class="n grad-text">03</div><h3>Flexible overflow capacity</h3><p>Add planning and design capacity when your backlog spikes and scale back when it slows, with no hiring, benefits or overhead on your side.</p></article>
       <article class="how-card reveal" style="--d:0.18s"><div class="n grad-text">04</div><h3>Start with a small job</h3><p>Send one package first so your team can review the work before committing to more. Rates are quoted per project or hourly.</p></article>
     </div>
@@ -448,9 +626,28 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
       <div>
         <h3>Danny Orozco</h3>
         <p class="role">Owner, Orozco Engineering LLC · OSP Planning Engineer</p>
-        <p>Danny Orozco is an OSP Planning Engineer and the owner of Orozco Engineering, based in Fontana, California. He brings 30+ years of combined outside plant fiber engineering, planning, design and project delivery experience, including work with AT&amp;T, Cox, Frontier and Spectrum, and with firms such as Pearce Services, CTC Technology, WYYERD Fiber and CHC Consulting. Danny specializes in F1 feeder-fiber capacity assessment, route tracing and reinforcement planning, along with GPON/FTTX distribution design, permitting and utility coordination, QA/QC and as-built documentation, and leads each Orozco Engineering project directly.</p>
-        <div class="btns"><a class="btn btn-glass btn-sm" href="Danny_Orozco_OSP_Engineer_Resume.pdf" download><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Danny's resume (PDF)</a></div>
+        <p>Danny Orozco is an OSP Planning Engineer and the owner of Orozco Engineering, based in Fontana, California. He brings 17+ years of outside plant fiber engineering, planning, design and project delivery experience, including work with AT&amp;T and Cox, and with firms such as Pearce Services, WYYERD Fiber and CHC Consulting. Danny specializes in F1 feeder-fiber capacity assessment, route tracing and reinforcement planning, along with GPON/FTTX distribution design, permitting and utility coordination, QA/QC and as-built documentation, and leads each Orozco Engineering project directly.</p>
+        <p>Danny also brings project management experience. As a Project Manager at AT&amp;T, he verified costs, labor and resource allocations, reviewed scopes of work, and managed schedules, completion dates and deliverables for OSP fiber projects. Earlier, as a Project Manager and Design Engineer at CHC Consulting, he designed fiber routes, prepared cost quotes, and coordinated permits and pathway approvals with cities and utilities.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 id="faq-title">Common <em class="grad-text">questions</em></h2>
+    </div>
+    <div class="faq-list">
+      <details class="reveal"><summary>What does OSP mean?</summary><p>OSP stands for outside plant: the fiber cables, conduit, poles, vaults and handholes outside of buildings that carry a network from the central office or hub to homes and businesses.</p></details>
+      <details class="reveal"><summary>Where do you work?</summary><p>All of California. Design, drafting and permitting are done remotely statewide. On-site field walkouts are available across the Inland Empire and Southern California, and elsewhere by arrangement.</p></details>
+      <details class="reveal"><summary>Do you handle Caltrans permits?</summary><p>Yes. We prepare layout drawings, traffic control plans and applications for Caltrans encroachment permits, along with city and county permits, and follow submittals through plan check corrections to approval.</p></details>
+      <details class="reveal"><summary>Who actually does the work?</summary><p>Danny Orozco leads every Orozco Engineering project directly, so you work with the same person from scope through delivery.</p></details>
+      <details class="reveal"><summary>Can we start with a small job?</summary><p>Yes. Many clients start with one package so their team can review the work before sending more.</p></details>
+      <details class="reveal"><summary>How is pricing set?</summary><p>Per project or hourly, quoted after we review the scope. You get the rate and schedule in writing before work starts.</p></details>
+      <details class="reveal"><summary>What files will we receive?</summary><p>PDF drawing sets and AutoCAD (DWG) files, plus quantities, applications and other documents in the format your team uses. We can work to your title blocks, layers and design standards.</p></details>
+      <details class="reveal"><summary>What do you need from us to get started?</summary><p>The project location or area, type of work, plant type (aerial, underground or buried), any records or base maps you have, your design standards, and your deadline.</p></details>
     </div>
   </div>
 </section>
@@ -462,8 +659,9 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
       <div class="cta-grid">
         <div>
           <span class="eyebrow">Contact</span>
-          <h2 id="contact-title">Have an OSP <em class="grad-text">fiber project?</em></h2>
-          <p>Call or send a short scope and Orozco Engineering LLC will follow up to talk through the work, schedule and rate. Happy to start with a small job.</p>
+          <h2 id="contact-title">Let's get your community <em class="grad-text">connected</em></h2>
+          <p>Have an OSP fiber project anywhere in California? Call or email a short scope and Danny will follow up to talk through the work, schedule and rate. Happy to start with a small job.</p>
+          <p style="margin-top:-.6rem;color:var(--muted)">Orozco Engineering LLC · Fontana, CA · (909) 695-8326 · danny@orozcoengineering.com</p>
           <div class="btns">
             <a class="btn btn-grad" href="tel:+19096958326"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (909) 695-8326</a>
             <a class="btn btn-glass" href="mailto:danny@orozcoengineering.com?subject=Orozco%20Engineering%20-%20OSP%20Fiber%20Project&amp;body=Hi%20Danny%2C%0A%0AProject%20location%3A%20%0AType%20of%20work%3A%20%0APlant%20type%20(aerial%2Funderground%2Fburied)%3A%20%0ATimeline%3A%20%0A%0AThanks%2C%0A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email a project</a>
@@ -475,7 +673,7 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
           <h3>Helpful to include</h3>
           <ul>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Project location, or whether it's remote only</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Type of work: capacity planning, FTTH design, make-ready / permitting, QA/QC, estimating</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Type of work: route design, make-ready / joint use, pole loading, substructure, layout / TCP permits, project &amp; permit management, as-builts, QA/QC</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Plant type: aerial, underground or buried</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Tools or systems required (e.g. AutoCAD, IQGeo, Bluebeam, ArcGIS)</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Timeline and whether it's a one-off package or ongoing overflow</li>
@@ -495,12 +693,13 @@ footer{background:#070707;color:var(--muted);padding:3.2rem 0 2.2rem;font-size:.
           <img class="brand-logo" src="assets/img/logo/orozco-icon-128.webp" width="44" height="44" alt="" loading="lazy">
           <span class="brand-name">Orozco <em>Engineering</em></span>
         </a>
-        <p>OSP fiber planning, design and permitting support. Fontana, CA, serving Southern California on-site and projects anywhere remotely.</p>
+        <p>Designing the fiber paths that connect our communities. OSP fiber design, make-ready and permitting from Fontana, CA, serving all of California.</p>
       </div>
       <nav aria-label="Footer">
         <ul>
-          <li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li>
-          <li><a href="#why">Why us</a></li><li><a href="#founder">About</a></li>
+          <li><a href="#mission">Mission</a></li><li><a href="#services">Services</a></li>
+          <li><a href="#process">How we work</a></li><li><a href="#projects">Projects</a></li>
+          <li><a href="#faq">FAQ</a></li><li><a href="#founder">About</a></li>
           <li><a href="#contact">Contact</a></li><li><a href="Orozco-Engineering-Portfolio.pdf" download>Portfolio (PDF)</a></li>
         </ul>
       </nav>
